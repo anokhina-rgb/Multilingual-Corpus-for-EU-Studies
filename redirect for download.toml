@@ -1,0 +1,9 @@
+[build]
+  publish = "public"  # or the directory where your static files are
+  command = "npm run build"  # if you have a build command; replace with actual command or remove if not needed
+
+[[headers]]
+for = "/*.tmx.gz"  # or other file types
+[headers.values]
+  Content-Disposition = "attachment"
+  Content-Type = "application/octet-stream"
